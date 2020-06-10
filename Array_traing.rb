@@ -75,3 +75,46 @@ if Array.try_convert(not_array)
 else
   puts " not an array "
 end
+
+#============================================
+# comparison
+
+puts [1, 2, 4] <=> [1, 2, 5]
+
+#=====================
+# map
+#puts i_array.map { |i| i*2 }
+
+#==============================
+# combinations & count & cycle & index &join & product $ rotate & sample
+print i_array.combination(2).to_a
+puts i_array.count
+i_array.cycle(2) {|i| print i*2}
+puts "\n"
+puts i_array.fetch(1)
+puts str_array.index('def')
+
+print mix_array.flatten
+puts "\n"
+print i_array.join(";")
+print i_array.product(i_array)
+print i_array.reverse!
+
+temp = [1,2,2,2,3,2]
+puts temp.rindex(2)
+puts temp.rotate(2)
+
+print i_array.sample(2) #two numbers at random
+
+print [1,2,3,4,5].select { |num|  num.even?  }
+
+temp = %w{ a b c d e f }
+print temp.select { |v| v =~ /[aeiou]/ } #check vowels
+puts temp.slice(2)
+
+# sorting
+temp = [ "d", "a", "e", "c", "b" ]
+print temp.sort
+print temp.sort { |x,y| y <=> x }
+
+print temp.zip(i_array)
