@@ -85,7 +85,7 @@ puts [1, 2, 4] <=> [1, 2, 5]
 # map
 #puts i_array.map { |i| i*2 }
 
-#==============================
+#=====================
 # combinations & count & cycle & index &join & product $ rotate & sample
 print i_array.combination(2).to_a
 puts i_array.count
